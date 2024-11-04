@@ -26,4 +26,56 @@ The primary source for the LITA Wave Subscription Hub is the customer data, whic
   3. Validate the accuracy of the data to ensure its reliability for analysis
   
 ## Exploratory Data Analysis
-The Exploratory Data Analysis (EDA) phase is crucial for understanding the customer subscription data and uncovering patterns that can inform strategic decisions.
+The Exploratory Data Analysis (EDA) phase is essential for understanding the customer subscription data and uncovering patterns that can inform strategic decisions. By utilizing pivot tables to aggregate data across various dimensions, we can calculate total revenue and average subscription duration by Subscription Type or Region, as well as count subscriptions and identify trends over time.
+
+## Data Analysis
+The Customer subscription data is properly loaded into the SQL Server by importing the data after saving as a CSV file.
+```SQL
+Select * from [dbo].[LITACAPSULE_CustomerCare]
+```
+---Total Numbers of Customers in Each Region
+Select Region, Count(CustomerId) as Total_Customers
+from [dbo].[LITACAPSULE_CustomerCare]
+Group by Region
+Order by Count(CustomerId) desc
+```
+---Most Popular Subscription Type by Number of Customers
+Select SubscriptionType, count(CustomerID) as Most_Popular
+from [dbo].[LITACAPSULE_CustomerCare]
+Group by SubscriptionType
+Order by count(CustomerID) desc
+```
+---Customers who Canceled Subscription within 6 Months
+Select CustomerID, CustomerName, Subscription_Duration, Canceled
+from [dbo].[LITACAPSULE_CustomerCare]
+Where DATEDIFF(Month, Subscription_Duration, Canceled) < 6
+Group by CustomerID, CustomerName, Subscription_Duration , Canceled
+
+---Average Subscription Duration for all Customers
+Select CustomerID, CustomerName, AVG(Subscription_Duration) as AVG_Duration
+From [dbo].[LITACAPSULE_CustomerCare]
+Group by CustomerID, CustomerName
+
+---Customers with Subscription Longer Than 12 Months
+Select CustomerID, CustomerName, Subscription_Duration, SubscriptionStart, SubscriptionEnd, SubscriptionType, Canceled, Revenue, Region
+From [dbo].[LITACAPSULE_CustomerCare]
+Where MONTH (Subscription_Duration) > 12
+Group by CustomerID, CustomerName, Subscription_Duration, SubscriptionStart, SubscriptionEnd, SubscriptionType, Canceled, Revenue, Region
+
+---Total Revenue by Subscription Type
+Select SubscriptionType, Sum(Revenue) as Total_Revenue
+From [dbo].[LITACAPSULE_CustomerCare]
+Group by SubscriptionType
+Order by Sum(Revenue) Desc
+
+---Select Top 3 Region by Subscription Cancellations
+Select Top 3 Region, count(Canceled) as Top_3_Region
+From [dbo].[LITACAPSULE_CustomerCare]
+Group by Region
+Order by Count(Canceled) Desc
+
+---Total Number of Active and Canceled Subscription
+Select count(SubscriptionType) as Active_Subscription, count(canceled) as Canceled_Subscription
+From [dbo].[LITACAPSULE_CustomerCare]
+Group by SubscriptionType, Canceled
+```
