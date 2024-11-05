@@ -27,6 +27,14 @@ The primary source for the LITA Wave Subscription Hub is the customer data, whic
   
 ## Exploratory Data Analysis
 The Exploratory Data Analysis (EDA) phase is essential for understanding the customer subscription data and uncovering patterns that can inform strategic decisions. By utilizing pivot tables to aggregate data across various dimensions, we can calculate total revenue and average subscription duration by Subscription Type or Region, as well as count subscriptions and identify trends over time.
+- retrieve the total number of customers from each region. 
+-  find the most popular subscription type by the number of customers. 
+-  find customers who canceled their subscription within 6 months. 
+-  calculate the average subscription duration for all customers. 
+-  find customers with subscriptions longer than 12 months. 
+-  calculate total revenue by subscription type. 
+-  find the top 3 regions by subscription cancellations. 
+-  find the total number of active and canceled subscriptions.
 
 ## Data Analysis
 The Customer subscription data is properly loaded into the SQL Server by importing the data after saving as a CSV file. Created a Database called LITAPROJECT_DB
