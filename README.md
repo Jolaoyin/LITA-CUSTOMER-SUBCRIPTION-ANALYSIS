@@ -106,7 +106,8 @@ Group by SubscriptionType, Canceled
 
 
 ### PowerBI Visualisation
-![Screenshot (9)](https://github.com/user-attachments/assets/091685d6-d191-4b25-8eee-ea24e0e94c0e)
+![Screenshot (21)](https://github.com/user-attachments/assets/f6318250-6480-4e6a-872d-f3c08b4bf761)
+
 
 ## Insights
 
