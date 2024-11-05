@@ -104,8 +104,13 @@ Group by SubscriptionType, Canceled
 ### Excel Report
 ![Screenshot (20)](https://github.com/user-attachments/assets/3d3cbc0f-a33d-43b8-8710-a5837c75331d)
 
-
-### PowerBI Visualisation
+## PowerBI Visualisation
+### Steps used to build an interactive PowerBI Dashboard
+1. Import and Transform Data: Imported, transformed and loaded customer subscription data.
+2. Build Visualizations: Used bar, column, map, line, donut and pie charts to represent customer subscription data..
+3. Add KPI cards and Slicers: Included Cards for performance tracking and slicers for filtering data by Subscription Type and Region.
+4. Format and Share: Customized the dashboard.
+   
 ![Screenshot (21)](https://github.com/user-attachments/assets/f6318250-6480-4e6a-872d-f3c08b4bf761)
 
 
