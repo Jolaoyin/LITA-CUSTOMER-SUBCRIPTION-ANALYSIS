@@ -102,7 +102,8 @@ Group by SubscriptionType, Canceled
 ![Screenshot_Pivot](https://github.com/user-attachments/assets/2c97286c-fa82-4607-807c-e702c5cec567)
 
 ### Excel Report
-![Screenshot_Report](https://github.com/user-attachments/assets/4e3e5c45-8348-4af3-96de-e67142ec670e)
+![Screenshot (20)](https://github.com/user-attachments/assets/3d3cbc0f-a33d-43b8-8710-a5837c75331d)
+
 
 ### PowerBI Visualisation
 ![Screenshot (9)](https://github.com/user-attachments/assets/091685d6-d191-4b25-8eee-ea24e0e94c0e)
