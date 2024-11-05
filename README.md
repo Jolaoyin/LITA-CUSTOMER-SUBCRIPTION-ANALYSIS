@@ -1,3 +1,4 @@
+
 # LITA-CUSTOMER-SUBCRIPTION-ANALYSIS
 
 ## Project Title: LITA Wave Subscription Hub
@@ -89,3 +90,4 @@ Group by SubscriptionType, Canceled
 ```
 
 ## Data Visualisation
+![Screenshot (15)](https://github.com/user-attachments/assets/796f5f83-3cf2-41e4-a078-bdb746660408)
