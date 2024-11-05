@@ -90,4 +90,3 @@ Group by SubscriptionType, Canceled
 
 ## Data Visualisation
 ![Screenshot_Pivot](https://github.com/user-attachments/assets/2c97286c-fa82-4607-807c-e702c5cec567)
-
